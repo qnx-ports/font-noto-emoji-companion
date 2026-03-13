@@ -2,7 +2,7 @@
 # Maintainer: Aaron Bassett <abassett@qnx.com>
 pkgname=font-noto-emoji
 pkgver=2.048
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="Google Noto emoji fonts"
 url="https://github.com/googlefonts/noto-emoji"
 arch="noarch"
@@ -22,6 +22,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 f428dedcc4cfad7167237cfcf68fb8576e4fde2d9baf5a6adcda04c00cdac97112c965db1d1b61b728a3675f53ddae6f675edf0954522a38b5207c017bf9b0bc  font-noto-emoji-2.048.tar.gz
 "
